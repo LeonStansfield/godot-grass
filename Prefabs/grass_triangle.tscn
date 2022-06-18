@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/grass_triangle.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Scripts/grass_deform.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Shaders/grass_shadermaterial.tres" type="Material" id=3]
+
+[node name="grass_triangle" type="MeshInstance"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -50, 0 )
+material_override = ExtResource( 3 )
+mesh = ExtResource( 1 )
+skeleton = NodePath("../..")
+material/0 = null
+script = ExtResource( 2 )
+character_path = NodePath("../../Player")
